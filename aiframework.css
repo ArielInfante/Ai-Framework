@@ -1,0 +1,134 @@
+/* /////////////////////////////////
+		ARIEL INFANTE RESET
+///////////////////////////////////*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{-moz-box-sizing:border-box;-o-box-sizing:border-box;-webkit-box-sizing:border-box;border:0;box-sizing:border-box;font:inherit;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul,nav{list-style:none;}a{text-decoration:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}table{border-collapse:collapse;border-spacing:0;}.clr{clear:both;}.fl{float:left;}.fr{float:right;}
+/* /////////////////////////////////
+		CLEARFIX HACK
+///////////////////////////////////*/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+/* ////////// TYPOGRAPHY ///////////// */
+strong {font-weight:bold;}
+p {}
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+address {}
+pre, code {font-family: monospace;}
+/* ////////// GRIDS ///////////// */
+.framework {
+	width: 100%;
+}
+.framework:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+[class*='col-'] {
+	display: inline;
+	position: relative;
+	float: left;
+	padding-right: 20px;
+}
+[class*='col-']:last-of-type {
+	padding-right: 0;
+}
+.frame-pad {
+	padding: 20px 0 20px 20px;
+}
+.frame-pad > [class*='col-']:last-of-type {
+	padding-right: 20px;
+}
+.col-8-8 {
+	width: 100%;
+}
+.col-7-8 {
+	width: 87.5%;
+}
+.col-6-8 {
+	width: 75%;
+}
+.col-5-8 {
+	width: 62.5%;
+}
+.col-4-8 {
+	width: 50%;
+}
+.col-3-8 {
+	width: 27.5%;
+}
+.col-2-8 {
+	width: 25%;
+}
+.col-1-8 {
+	width: 12.5%;
+}
+div {
+	background-color: #fff;
+	border: 5px solid rgba(150,150,150,1);
+}
+/* //////////////////////////////
+		MEDIA QUERIES
+////////////////////////////// */
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    /* Styles */
+ 
+}
+ 
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px)
+and (max-width : 480px) {
+    /* Styles */
+ 
+}
+ 
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : 481px)
+and (max-width : 768px) {
+    /* Styles */
+ 
+}
+ 
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : 769px) 
+and (max-width : 1024px) {
+    /* Styles */
+ 
+}
+ 
+/* Larger screens ----------- */
+@media only screen 
+and (min-width : 1024px) {
+    /* Styles */
+ 
+}
