@@ -1,0 +1,164 @@
+doctype html
+html
+    head
+        title Ai Forms
+        meta(charset="utf-8")
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" )
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+        link(rel="shortcut icon", type="image/png", href="img/favicon.png")
+        link(rel="stylesheet", href="css/ai-framework.css")
+        script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        script(type="text/javascript", src="js/script.js")
+    body(style="margin-bottom: 200px;")
+        form.ai-form
+            .form-block
+                label(for="inputLabel1") inline label
+                input.ai-input#inputLabel1(type="text", placeholder="placeholder")
+            hr
+            .form-block
+                input.ai-input#inputLabel2(type="text", placeholder="placeholder")
+                label(for="inputLabel2") inline label
+            hr
+            .form-block
+                label(for="inputLabel2") drop label
+                    input.ai-input#inputLabel2(type="text", placeholder="placeholder")
+            hr
+            .form-block
+                input.ai-input(type="radio", name="radioinput", value="radio1")
+                input.ai-input(type="radio", name="radioinput", value="radio2")
+            hr
+            .form-block
+                label(for="aiRadio1") drop label
+                    input.ai-input#aiRadio1(type="radio", name="radioinput", value="radio1")
+            hr
+            .form-block
+                label(for="aiRadio2") inline label
+                input.ai-input#aiRadio2(type="radio", name="radioinput", value="radio2")
+            hr
+            .form-block
+                input.ai-input#aiRadio2(type="radio", name="radioinput", value="radio2")
+                label(for="aiRadio2") inline label
+            hr
+            .form-block
+                input.ai-input(type="checkbox", name="checkboxinput", value="checkbox1")
+                input.ai-input(type="checkbox", name="checkboxinput", value="checkbox2")
+            hr
+            .form-block
+                label(for="aiCheckbox1") drop label
+                    input.ai-input#aiCheckbox1(type="checkbox", name="checkboxinput", value="checkbox1")
+            hr
+            .form-block
+                label(for="aiCheckbox2") inline label
+                input.ai-input#aiCheckbox2(type="checkbox", name="checkboxinput", value="checkbox2")
+            hr
+            .form-block
+                input.ai-input#aiCheckbox2(type="checkbox", name="checkboxinput", value="checkbox2")
+                label(for="aiCheckbox2") inline label
+            hr
+            .form-block
+                label(for="aiTextarea1") drop label
+                    textarea.ai-textarea#aiTextarea1(name="textarea", cols="30", rows="10" placeholder="Type everything here!")
+            hr
+            .form-block
+                label(for="aiTextarea2") inline label
+                textarea.ai-textarea#aiTextarea2(name="textarea", cols="30", rows="10" placeholder="Type everything here!")
+            hr
+            .form-block
+                textarea.ai-textarea#aiTextarea2(name="textarea", cols="30", rows="10" placeholder="Type everything here!")
+                label(for="aiTextarea2") inline label
+            hr
+            .form-block
+                input.ai-input.input-sm#inputLabel1(type="text", placeholder="placeholder")
+                br
+                input.ai-input.input-md#inputLabel1(type="text", placeholder="placeholder")
+                br
+                input.ai-input.input-lg#inputLabel1(type="text", placeholder="placeholder")
+                br
+                input.ai-input.input-xl#inputLabel1(type="text", placeholder="placeholder")
+            hr
+            .form-block
+                label(for="aiSelect1") drop label
+                    select.ai-select#aiSelect1(name="aiSelect1", placeholder="Select")
+                        option(selected=true) option1
+                        option option2
+                        option option3
+            hr
+            .form-block
+                label(for="aiSelect2") inline label
+                select.ai-select#aiSelect2(name="aiSelect2", placeholder="Select")
+                    option option1
+                    option(selected=true) option2
+                    option option3
+            hr
+            .form-block
+                select.ai-select#aiSelect2(name="aiSelect2", placeholder="Select")
+                    option option1
+                    option(selected=true) option2
+                    option option3
+                label(for="aiSelect2") inline label
+            hr
+            .form-block
+                label.select-block.select-block-right(for="aiSelect2")
+                    input.ai-input#inputLabel1(type="text", placeholder="placeholder")
+                    select.ai-select#aiSelect2(name="aiSelect2", placeholder="Select")
+                        option .com
+                        option .gmail
+                        option .hotmail
+            hr
+            .form-block
+                label.select-block.select-block-left(for="aiSelect2")
+                    select.ai-select#aiSelect2(name="aiSelect2", placeholder="Select")
+                        option option1
+                        option(selected=true) option2
+                        option option3
+                    input.ai-input#inputLabel1(type="text", placeholder="placeholder")
+            hr
+            .form-block
+                | REGULAR
+                br
+                label.icon-block(for="aiInputicon")
+                    i.fa.fa-star
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+            .form-block
+                | SMALL
+                br
+                label.icon-block-sm(for="aiInputicon")
+                    i.fa.fa-star
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+            .form-block
+                | MEDIUM
+                br
+                label.icon-block-md(for="aiInputicon")
+                    i.fa.fa-star
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+            .form-block
+                | LARGE
+                br
+                label.icon-block-lg(for="aiInputicon")
+                    i.fa.fa-star
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+            .form-block
+                | XTRA LARGE
+                br
+                label.icon-block-xl(for="aiInputicon")
+                    i.fa.fa-star
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+            .form-block
+                | Right Icon
+                br
+                label.icon-block-xl.icon-right(for="aiInputicon")
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder")
+                    i.fa.fa-star
+            hr
+            h1 Disabled
+            input.disabled(type="text")
+            br
+            .form-block
+                label.icon-block-xl.icon-right(for="aiInputicon")
+                    input.ai-input#aiInputicon(type="text", placeholder="placeholder", disabled="true")
+                    i.fa.fa-star
+            input(type="radio" disabled="true")
+            input(type="checkbox" disabled="true")

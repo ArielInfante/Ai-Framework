@@ -1,0 +1,101 @@
+.ai-pagination
+    height: 50px
+
+    ul
+        display: inline-block
+        li
+            display: inline-block
+            a
+                padding: 5px 8px
+                display: block
+                text-decoration: none
+                color: $blueColor
+
+        li.active
+            a
+        li.unavailable
+            a
+                &:hover
+                    cursor: default
+    &.border
+        ul
+            border-width: 1px
+            border-style: solid
+            border-color: $greyColor
+            li
+                border-right-width: 1px
+                border-style: solid
+                border-color: $greyColor
+                &:last-of-type
+                    border-right-width: 0
+    &.smooth
+        ul
+            border-radius: 5px
+
+
+
+// -------------------------------------------------------------------------------
+.slant-pagination
+    ul
+        padding: 0 20px
+        li
+            list-style-type: none
+            display: inline-block
+            border-right: 1px solid $greyColor
+            transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg)
+
+            &:hover,
+            &.active
+                background-color: $redColor
+                border-right: 1px solid #FFF
+                a
+                    color: #FFF
+
+            &:last-of-type
+                border-right-width: 0
+
+            &.first-number
+                border-left: 1px solid $greyColor
+
+            a
+                padding: 1.1em 1.6em
+                display: inline-block
+                text-decoration: none
+                color: $greyColor
+                font-size: light
+                transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(20deg) skewY(0deg)
+
+                &:hover
+                    color: #FFF
+
+                &.first:before,
+                &.last:after
+                    font-family: 'entypo'
+                    speak: none
+                    font-style: normal
+                    font-weight: normal
+                    font-variant: normal
+                    text-transform: none
+                    line-height: 1
+                    -webkit-font-smoothing: antialiased
+                    -moz-osx-font-smoothing: grayscale
+
+                &.first::before
+                    content: "\E765"
+                    margin-right: 0.5em
+
+                &.last::after
+                    content: "\E766"
+                    margin-left: 0.5em
+
+        li.pagination-item--wide
+            list-style-type: none
+            display: inline-block
+
+            a.pagination-link--wide
+                text-decoration: none
+                color: $greyColor
+                padding: 1.1em 1.6em
+
+                &:hover
+                    color: $redColor

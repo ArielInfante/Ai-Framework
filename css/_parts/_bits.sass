@@ -1,0 +1,109 @@
+$break-xs: "only screen and (max-width : 40em)"
+
+$break-min-sm: "only screen and (min-width: 40.063em)"
+$break-sm: "only screen and (min-width: 40.063em) and (max-width: 64em)"
+
+$break-min-md: "only screen and (min-width: 64.063em)"
+$break-md: "only screen and (min-width: 64.063em) and (max-width: 90em)"
+
+$break-min-lg: "only screen and (min-width: 90.063em)"
+$break-lg: "only screen and (min-width: 90.063em) and (max-width: 120em)"
+
+$break-xl: "only screen and (min-width: 120.063em)"
+
+// @media #{$break-xs}
+// @media #{$break-sm}
+// @media #{$break-md}
+// @media #{$break-lg}
+
+// Change colors to your liking
+$primaryColor: #FFF
+$secondaryColor: #000
+$tertiaryColor: #666
+
+// Default colors
+$defaultColor: #BDC3C7
+$successColor: #2ECC71
+$failureColor: #C0392B
+$warningColor: #F1C40F
+
+// Link colors
+$blueColor: #3498DB
+$redColor: #E74C3C
+$yellowColor: #F1C40F
+$greenColor: #2ECC71
+$greyColor: #95A5A6
+
+// Fonts Family
+$base-fontfamily: 'Themify'
+
+// Mixins
+@mixin clearfix()
+    &:before,
+    &:after
+        content: ""
+        display: table
+    &:after
+        clear: both
+
+// CSS bit classes
+.smooth
+    border-radius: 5px
+
+.sharp
+    border-radius: 0
+
+.color-primary
+    color: $primaryColor
+.color-secondary
+    color: $secondaryColor
+.color-tertiary
+    color: $tertiaryColor
+
+.bg-primary
+    background-color: $primaryColor
+.bg-secondary
+    background-color: $secondaryColor
+.bg-tertiary
+    background-color: $tertiaryColor
+
+.border-primary
+    border-color: $primaryColor
+.border-secondary
+    border-color: $secondaryColor
+.border-tertiary
+    border-color: $tertiaryColor
+
+.no-padding
+    padding: 0
+.no-padding-top
+    padding-top: 0
+.no-padding-bottom
+    padding-bottom: 0
+.no-padding-right
+    padding-right: 0
+.no-padding-left
+    padding-left: 0
+
+.no-margin
+    margin: 0
+.no-margin-top
+    margin-top: 0
+.no-margin-bottom
+    margin-bottom: 0
+.no-margin-right
+    margin-right: 0
+.no-margin-left
+    margin-left: 0
+
+.float-right
+    float: right
+
+.float-left
+    float: left
+
+.float-none
+    float: none
+
+div
+    display: block

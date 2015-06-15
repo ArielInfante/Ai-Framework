@@ -1,0 +1,271 @@
+input, form, textarea, fieldset, legend, label
+    box-sizing: inherit
+
+.ai-form
+    display: block
+    padding: 10px
+    clear: both
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+.form-block
+    width: 100%
+    margin-bottom: 15px
+    clear: both
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+.ai-input
+    outline: none
+    padding: 0
+    margin: 0
+    text-indent: 5px
+
+.ai-input[type='text']
+    height: 35px
+    margin: 0 5px 0 0
+    display: inline-block
+    vertical-align: baseline
+    border-width: 1px
+    border-style: solid
+    border-color: #CCC
+
+.ai-input[type='text']:focus
+    background-color: #EEE
+    border-color: #333
+
+@mixin inputSize($iWidth, $iHeight, $iFontsize)
+    width: $iWidth
+    height: $iHeight
+    font-size: $iFontsize
+
+.ai-input[type='text'].input-sm
+    @include inputSize(120px, 15px, 12px)
+
+.ai-input[type='text'].input-md
+    @include inputSize(150px, 25px, 16px)
+
+.ai-input[type='text'].input-lg
+    @include inputSize(200px, 45px, 20px)
+
+.ai-input[type='text'].input-xl
+    @include inputSize(250px, 75px, 26px)
+
+.ai-input[type='radio'],
+.ai-input[type='checkbox']
+    margin: 0 8px 0 0
+
+label
+    + .ai-input[type='text']
+        margin: 0 0 0 5px
+
+    > .ai-input[type='text']
+        display: block
+        margin: 8px 0
+
+    > .ai-input[type='checkbox'],
+    > .ai-input[type='radio']
+        display: block
+        margin: 8px
+
+    + .ai-input[type='checkbox'],
+    + .ai-input[type='radio']
+        display: inline-block
+        vertical-align: baseline
+        position: relative
+        top: -1px
+        margin: 0 0 0 8px
+
+.ai-textarea
+    outline: none
+    padding: 5px 0
+    text-indent: 5px
+    font-size: 12px
+    border-width: 1px
+    border-style: solid
+    border-color: #CCC
+    vertical-align: top
+
+.ai-textarea:focus
+    border-color: #333
+
+label
+    > .ai-textarea
+        display: block
+        margin: 8px 0
+
+    + .ai-textarea
+        display: inline-block
+        margin: 0 8px
+
+// $wh-sm: 15px
+// $wh-md: 25px
+// $wh-lg: 45px
+// $wh-xl: 75px
+@mixin iconBlock($iconSquare, $iconSize, $iconLineheight)
+    display: block
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+    > i
+        width: $iconSquare
+        height: $iconSquare
+        text-align: center
+        float: left
+        font-size: $iconSize
+        line-height: $iconLineheight
+        margin: 0 0 0 5px
+        border-width: 1px 0 1px 1px
+        border-style: solid
+        border-color: #CCC
+
+    > input[type='text']
+        float: left
+        margin: 0
+
+.icon-block-sm
+    @include iconBlock(20px, 10px, 1.8)
+
+    > input[type='text']
+        @include inputSize(120px, 20px, 12px)
+
+.icon-block, .icon-block-md
+    @include iconBlock(35px, 16px, 2)
+
+    > input[type='text']
+        @include inputSize(150px, 35px, 16px)
+
+.icon-block-lg
+    @include iconBlock(50px, 20px, 2.45)
+
+    > input[type='text']
+        @include inputSize(200px, 50px, 20px)
+
+.icon-block-xl
+    @include iconBlock(75px, 26px, 2.8)
+
+    > input[type='text']
+        @include inputSize(250px, 75px, 26px)
+
+[class^='icon-block'].icon-left
+    > i
+        margin: 0 0 0 5px
+        border-width: 1px 0 1px 1px
+    > input[type='text']
+        margin: 0 5px 0 0
+
+[class^='icon-block'].icon-right
+    > i
+        margin: 0 5px 0 0
+        border-width: 1px 1px 1px 0
+    > input[type='text']
+        // margin: 0 0 0 5px
+
+.ai-select
+    width: 125px
+    height: 40px
+    outline: none
+    text-indent: 5px
+    font-size: 12px
+    border-width: 1px
+    border-style: solid
+    border-color: #CCC
+    border-radius: 0
+    background-color: #FFF
+    background-image: url('../images/base/arrow-down.png')
+    background-repeat: no-repeat
+    background-position: 95% center
+    -webkit-appearance: none
+    &:focus
+        border-color: #333
+
+label
+    display: inline-block
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+    > .ai-select
+        margin-top: 5px
+        display: block
+
+    + .ai-select
+        display: inline-block
+        vertical-align: baseline
+
+.select-block.select-block-right
+    > .ai-select
+        border-width: 1px 1px 1px 0
+
+.select-block.select-block-left
+    > .ai-select
+        border-width: 1px 0 1px 1px
+
+@mixin selectBlock($selectSquare)
+    > .ai-input[type='text']
+        float: left
+        margin: 0
+
+    > .ai-select
+        width: $selectSquare + 25px
+        height: $selectSquare
+        margin: 0
+        float: left
+
+.select-block-sm
+    @include selectBlock(20px)
+
+    > .ai-input[type='text']
+        @include inputSize(120px, 20px, 12px)
+
+.select-block, .select-block-md
+    @include selectBlock(35px)
+
+    > .ai-input[type='text']
+        @include inputSize(150px, 35px, 16px)
+
+.select-block-lg
+    @include selectBlock(50px)
+
+    > .ai-input[type='text']
+        @include inputSize(200px, 50px, 20px)
+
+.select-block-xl
+    @include selectBlock(75px)
+
+    > .ai-input[type='text']
+        @include inputSize(250px, 75px, 26px)
+
+input[type='text'][disabled],
+input[type='radio'][disabled],
+input[type='checkbox'][disabled],
+textarea[disabled],
+input[type='text'].disabled,
+input[type='radio'].disabled,
+input[type='checkbox'].disabled,
+textarea.disabled,
+fieldset[disabled] input[type='text'],
+fieldset[disabled] input[type='radio'],
+fieldset[disabled] input[type='checkbox'],
+fieldset[disabled] textarea,
+fieldset.disabled input[type='text'],
+fieldset.disabled input[type='radio'],
+fieldset.disabled input[type='checkbox'],
+fieldset.disabled textarea
+    cursor: not-allowed
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none

@@ -1,0 +1,140 @@
+$base-height-bar: 50px
+$base-sm-height-bar: $base-height-bar - 25px
+$base-md-height-bar: $base-height-bar + 25px
+$base-lg-height-bar: $base-height-bar + 100px
+$base-xl-height-bar: $base-height-bar + 200px
+
+$base-width-bar: 50px
+$base-sm-width-bar: $base-width-bar - 25px
+$base-md-width-bar: $base-width-bar + 25px
+$base-lg-width-bar: $base-width-bar + 100px
+$base-xl-width-bar: $base-width-bar + 200px
+
+$horizontal-nav-height: 50px
+$vertical-nav-width: 200px
+
+.top-bar, .bottom-bar
+    position: fixed
+    left: 0
+    right: 0
+    height: $base-height-bar
+    a
+        line-height: $base-height-bar
+
+.top-bar
+    top: 0
+
+.bottom-bar
+    bottom: 0
+
+.top-bar.sm-bar, .bottom-bar.sm-bar,
+    height: $base-sm-height-bar
+    a
+        line-height: $base-sm-height-bar
+.top-bar.md-bar, .bottom-bar.md-bar
+    height: $base-md-height-bar
+    a
+        line-height: $base-md-height-bar
+.top-bar.lg-bar, .bottom-bar.lg-bar
+    height: $base-lg-height-bar
+    a
+        line-height: $base-lg-height-bar
+.top-bar.xl-bar, .bottom-bar.xl-bar
+    height: $base-xl-height-bar
+    a
+        line-height: $base-xl-height-bar
+
+.left-bar
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+
+.right-bar
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+
+.left-bar.sm-bar, .right-bar.sm-bar
+    width: $base-sm-width-bar
+.left-bar.md-bar, .right-bar.md-bar
+    width: $base-md-width-bar
+.left-bar.lg-bar, .right-bar.lg-bar
+    width: $base-lg-width-bar
+.left-bar.xl-bar, .right-bar.xl-bar
+    width: $base-xl-width-bar
+
+.left-bar.has-top-bar,
+.right-bar.has-top-bar
+    padding-top: $base-height-bar
+
+.left-bar.has-sm-top-bar,
+.right-bar.has-sm-top-bar
+    padding-top: $base-sm-height-bar
+
+.left-bar.has-md-top-bar,
+.right-bar.has-md-top-bar
+    padding-top: $base-md-height-bar
+
+.left-bar.has-lg-top-bar,
+.right-bar.has-lg-top-bar
+    padding-top: $base-lg-height-bar
+
+.left-bar.has-xl-top-bar,
+.right-bar.has-xl-top-bar
+    padding-top: $base-xl-height-bar
+
+.left-bar.has-sm-bottom-bar,
+.right-bar.has-sm-bottom-bar
+    padding-bottom: $base-height-bar
+
+.left-bar.has-sm-bottom-bar,
+.right-bar.has-sm-bottom-bar
+    padding-bottom: $base-sm-height-bar
+
+.left-bar.has-md-bottom-bar,
+.right-bar.has-md-bottom-bar
+    padding-bottom: $base-md-height-bar
+
+.left-bar.has-lg-bottom-bar,
+.right-bar.has-lg-bottom-bar
+    padding-bottom: $base-lg-height-bar
+
+.left-bar.has-xl-bottom-bar,
+.right-bar.has-xl-bottom-bar
+    padding-bottom: $base-xl-height-bar
+
+// [role='navigation']
+.horizontal-menu
+    height: 100%
+    display: block
+    // border-width: 1px 0
+    // border-style: solid
+    // border-color: #333
+
+    li
+        display: inline-block
+
+        a
+            display: block
+            padding: 0 10px
+            text-decoration: none
+            vertical-align: middle
+
+.vertical-menu
+    // width: $vertical-nav-width
+
+    li
+        text-align: center
+
+        a
+            padding: 10px 0
+            display: block
+            text-decoration: none
+
+.text-middle
+    vertical-align: middle
+
+.text-bottom
+    vertical-align: bottom

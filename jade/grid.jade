@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Ai Grid System
+        meta(charset="utf-8")
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" )
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+        link(rel="shortcut icon", type="image/png", href="img/favicon.png")
+        link(rel="stylesheet", href="css/ai-framework.css")
+        script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        script(type="text/javascript", src="js/script.js")
+    body
+        .ai-g
+            .ai-col-2-4(style="height: 50px")
+                p column 50% or halfway
+            .ai-col-2-4(style="height: 50px")
+                p column 50% or halfway
+        .ai-g
+            .ai-col-2-8(style="height: 50px")
+                p column 25% or halfway
+            .ai-col-2-8(style="height: 50px")
+                p column 25% or halfway
+            .ai-col-2-8(style="height: 50px")
+                p column 25% or halfway
+            .ai-col-2-8(style="height: 50px")
+                p column 25% or halfway
+        hr.fade
+        .ai-g-4
+            .ai-col-sm-2.ai-col-md-3(style="background-color: red; height: 50px")
+            .ai-col-sm-2.ai-col-md-1(style="background-color: blue; height: 50px")

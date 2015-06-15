@@ -1,0 +1,169 @@
+.btn
+    font-family: inherit
+    cursor: pointer
+    padding: 6px 12px
+    display: inline-block
+    margin: 5px
+    letter-spacing: 1px
+    font-weight: normal
+    line-height: 1.42857143
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    outline: none
+    position: relative
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    background-image: none
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.focus
+        text-decoration: none
+
+.btn-round
+    border-radius: 20px
+    &:after
+        border-radius: 20px
+
+@mixin button($color)
+    @extend .btn
+    border: 1px solid $color
+    background-color: $color
+    color: #FFF
+    &:hover,
+    &:active
+        color: #FFF
+        @if $color != 'transparent'
+            background-color: darken($color, 10%)
+    &:after
+        background: $color
+
+.btn-default
+    @include button($defaultColor)
+
+.btn-success
+    @include button($successColor)
+
+.btn-failure
+    @include button($failureColor)
+
+.btn-warning
+    @include button($warningColor)
+
+.btn-link
+    @include button('transparent')
+
+    &:hover
+        text-decoration: underline
+
+.btn-sm
+    padding: 6px 12px
+    font-size: 12px
+.btn-sm.btn-round
+    border-radius: 15px
+    &:after
+        border-radius: 15px
+
+.btn-md
+    padding: 12px 24px
+    font-size: 16px
+.btn-md.btn-round
+    border-radius: 25px
+    &:after
+        border-radius: 25px
+
+.btn-lg
+    padding: 24px 48px
+    font-size: 20px
+.btn-lg.btn-round
+    border-radius: 40px
+    &:after
+        border-radius: 40px
+
+.btn-xl
+    padding: 48px 96px
+    font-size: 24px
+.btn-xl.btn-round
+    border-radius: 60px
+    &:after
+        border-radius: 60px
+
+// ------------- THIS IS THAT ANIMATION PLUGIN ----------------
+.btn-default[class*='btn-ani-']
+    color: $defaultColor
+    &:after
+        background: $defaultColor
+
+.btn-success[class*='btn-ani-']
+    color: $successColor
+    &:after
+        background: $successColor
+
+.btn-failure[class*='btn-ani-']
+    color: $failureColor
+    &:after
+        background: $failureColor
+
+.btn-warning[class*='btn-ani-']
+    color: $warningColor
+    &:after
+        background: $warningColor
+
+[class*='btn-ani-']
+    -webkit-transition: all 0.3s
+    -moz-transition: all 0.3s
+    transition: all 0.3s
+    background: none
+
+    &:hover
+        background: none
+
+    &:after
+        content: ''
+        position: absolute
+        z-index: -1
+        -webkit-transition: all 0.3s
+        -moz-transition: all 0.3s
+        transition: all 0.3s
+
+.btn-ani-swipe-down
+    &:after
+        width: 100%
+        height: 0
+        top: 0
+        left: 0
+
+    &:hover,
+    &:active
+        color: #FFF
+
+    &:hover:after,
+    &:active:after
+        height: 100%
+
+.btn-ani-swipe-right
+    &:after
+        width: 0%
+        height: 100%
+        top: 0
+        left: 0
+
+    &:hover,
+    &:active
+        color: #FFF
+
+    &:hover:after,
+    &:active:after
+        width: 100%
+
+.btn.disabled,
+.btn[disabled],
+button.disabled,
+button[disabled]
+    cursor: not-allowed

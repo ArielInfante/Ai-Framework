@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        title Ai Pagination
+        meta(charset="utf-8")
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" )
+        <!--[if lt IE 9]>
+        script(src="http://html5shiv.googlecode.com/svn/trunk/html5.js")
+        <![endif]-->
+        link(rel="shortcut icon", type="image/png", href="img/favicon.png")
+        link(rel="stylesheet", href="css/ai-framework.css")
+        script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+        script(type="text/javascript", src="js/script.js")
+    body(style="padding: 10px")
+        nav.ai-pagination.border(aria-labelledby="pagination")
+            ul
+                li
+                    a(href="#", aria-label="First Page")
+                        span(aria-hidden="true") &laquo;
+                li
+                    a(href="#", aria-label="Previous Page")
+                        span(aria-hidden="true") &lsaquo;
+                li
+                    a(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3
+                li.unavailable
+                    a(href="") &hellip;
+                li
+                    a(href="#") 5
+                li
+                    a(href="#") 6
+                li
+                    a(href="#") 7
+                li
+                    a(href="#") 10
+                li
+                    a(href="#") 15
+                li
+                    a(href="#", aria-label="Next Page")
+                        span(aria-hidden="true") &rsaquo;
+                li
+                    a(href="#", aria-label="Last Page")
+                        span(aria-hidden="true") &raquo;
+        hr
+        nav.ai-pagination.slant-pagination(aria-labelledby="pagination")
+            ul
+                li.first
+                    a(href="#", aria-label="First Page")
+                        span(aria-hidden="true") &laquo;
+                li
+                    a(href="#", aria-label="Previous Page")
+                        span(aria-hidden="true") &lsaquo;
+                li
+                    a(href="#") 1
+                li
+                    a(href="#") 2
+                li
+                    a(href="#") 3
+                li.unavailable
+                    a(href="") &hellip;
+                li
+                    a(href="#") 5
+                li.active
+                    a(href="#") 6
+                li
+                    a(href="#") 7
+                li
+                    a(href="#") 10
+                li
+                    a(href="#") 15
+                li
+                    a(href="#", aria-label="Next Page")
+                        span(aria-hidden="true") &rsaquo;
+                li.last
+                    a(href="#", aria-label="Last Page")
+                        span(aria-hidden="true") &raquo;
