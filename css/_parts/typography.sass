@@ -1,40 +1,54 @@
-h1
-    margin: .67em 0
-    font-size: 2em
+// Fonts Family
+$fontFamilyBase: "Helvetica Neue", Helvetica, Arial, sans-serif
+$fontSizeBase: 62.5%
+$lineHeightBase: 1
+$fontColorBase: #000
+
+body
+    font-family: $fontFamilyBase
+    font-size: $fontSizeBase
+    line-height: $lineHeightBase
+    color: $fontColorBase
+    background-color: $bodyBg
+
+p
+    font-size: 1.6em
 
 h1,
 .h1
-    font-size: 36px
+    font-size: 4em
 
 h2,
 .h2
-    font-size: 30px
+    font-size: 3.2em
 
 h3,
 .h3
-    font-size: 24px
+    font-size: 2.8em
 
 h4,
 .h4
-    font-size: 18px
+    font-size: 2.2em
 
 h5,
 .h5
-    font-size: 14px
+    font-size: 1.8em
 
 h6,
 .h6
-    font-size: 12px
+    font-size: 1.4em
 
 b,
-strong
+strong,
+.font-bold
     font-weight: bold
 
-blockquote, q
+blockquote,
+q
     quotes: none
     margin: 1em 40px
 
-blockquote:before, blockquote:after,
+blockquote:before,blockquote:after,
 q:before, q:after
     content: ''
     content: none
@@ -46,15 +60,44 @@ pre
 
 .text-left
     text-align: left
-
 .text-right
     text-align: right
-
 .text-center
     text-align: center
-
-.font-thin
 .font-normal
-.font-bold
+    font-weight: normal
+    font-style: normal
+.font-oblique
+    font-style: oblique
 .font-italic
+    font-style: italic
+.font-light
+    font-weight: light
+.font-lighter
+    font-weight: lighter
+.font-bolder
+    font-weight: bolder
 .font-uppercase
+    text-transform: uppercase
+.font-lowercase
+    text-transform: lowercase
+.font-capitalize
+    text-transform: capitalize
+font-weight-100
+    font-weight: 100
+font-weight-200
+    font-weight: 200
+font-weight-300
+    font-weight: 300
+font-weight-400
+    font-weight: 400
+font-weight-500
+    font-weight: 500
+font-weight-600
+    font-weight: 600
+font-weight-700
+    font-weight: 700
+font-weight-800
+    font-weight: 800
+font-weight-900
+    font-weight: 900

@@ -13,20 +13,22 @@ html
         script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
         script(type="text/javascript", src="js/script.js")
     body
-        .ai-g
-            .ai-col-2-4(style="height: 50px")
-                p column 50% or halfway
-            .ai-col-2-4(style="height: 50px")
-                p column 50% or halfway
-        .ai-g
-            .ai-col-2-8(style="height: 50px")
-                p column 25% or halfway
-            .ai-col-2-8(style="height: 50px")
-                p column 25% or halfway
-            .ai-col-2-8(style="height: 50px")
-                p column 25% or halfway
-            .ai-col-2-8(style="height: 50px")
-                p column 25% or halfway
+        .ai-g-1
+            .ai-col-1(style="height: 50px")
+                p Width 100%
+        .ai-g-2
+            .ai-col-1(style="height: 50px")
+                p Width 50%
+            .ai-col-1(style="height: 50px")
+                p Width 50%
+        .ai-g-3
+            .ai-col-1(style="height: 50px")
+                p Width 33.33%
+            .ai-col-1(style="height: 50px")
+                p Width 33.33%
+            .ai-col-1(style="height: 50px")
+                p Width 33.33%
+
         hr.fade
         .ai-g-4
             .ai-col-sm-2.ai-col-md-3(style="background-color: red; height: 50px")

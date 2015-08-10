@@ -15,6 +15,7 @@ input, form, textarea, fieldset, legend, label
     width: 100%
     margin-bottom: 15px
     clear: both
+    font-size: 1.4em
 
     &:after
         content: ""
@@ -26,6 +27,7 @@ input, form, textarea, fieldset, legend, label
     padding: 0
     margin: 0
     text-indent: 5px
+    font-family: inherit
 
 .ai-input[type='text']
     height: 35px
@@ -39,6 +41,40 @@ input, form, textarea, fieldset, legend, label
 .ai-input[type='text']:focus
     background-color: #EEE
     border-color: #333
+
+@mixin button($color)
+    @extend .ai-input[type='submit']
+    border: 1px solid $color
+    background-color: $color
+    color: #FFF
+    &:hover,
+    &:active
+        color: #FFF
+        @if $color != 'transparent'
+            background-color: darken($color, 10%)
+    &:after
+        background: $color
+
+.ai-input[type='submit']
+    @include button($defaultColor)
+    border-radius: 0
+    cursor: pointer
+    padding: 6px 12px
+    display: inline-block
+    margin: 5px
+    letter-spacing: 1px
+    line-height: 1.42857143
+    text-align: center
+    white-space: nowrap
+    vertical-align: middle
+    position: relative
+    -ms-touch-action: manipulation
+    touch-action: manipulation
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    background-image: none
 
 @mixin inputSize($iWidth, $iHeight, $iFontsize)
     width: $iWidth
@@ -62,6 +98,8 @@ input, form, textarea, fieldset, legend, label
     margin: 0 8px 0 0
 
 label
+    font-size: 1.4em
+
     + .ai-input[type='text']
         margin: 0 0 0 5px
 
@@ -123,7 +161,7 @@ label
         float: left
         font-size: $iconSize
         line-height: $iconLineheight
-        margin: 0 0 0 5px
+        margin: 0
         border-width: 1px 0 1px 1px
         border-style: solid
         border-color: #CCC
@@ -176,11 +214,12 @@ label
     outline: none
     text-indent: 5px
     font-size: 12px
+    color: $defaultFontColor
     border-width: 1px
     border-style: solid
-    border-color: #CCC
+    border-color: $defaultBorderColor
     border-radius: 0
-    background-color: #FFF
+    background-color: $defaultBgColor
     background-image: url('../images/base/arrow-down.png')
     background-repeat: no-repeat
     background-position: 95% center
@@ -191,7 +230,7 @@ label
 label
     display: inline-block
 
-    &:after
+    &::after
         content: ""
         display: table
         clear: both
@@ -247,21 +286,29 @@ label
     > .ai-input[type='text']
         @include inputSize(250px, 75px, 26px)
 
+input[disabled],
 input[type='text'][disabled],
 input[type='radio'][disabled],
 input[type='checkbox'][disabled],
+input[type='submit'][disabled],
 textarea[disabled],
+input.disabled,
 input[type='text'].disabled,
 input[type='radio'].disabled,
 input[type='checkbox'].disabled,
+input[type='submit'].disabled,
 textarea.disabled,
+fieldset[disabled] input,
 fieldset[disabled] input[type='text'],
 fieldset[disabled] input[type='radio'],
 fieldset[disabled] input[type='checkbox'],
+fieldset[disabled] input[type='submit'],
 fieldset[disabled] textarea,
+fieldset.disabled input,
 fieldset.disabled input[type='text'],
 fieldset.disabled input[type='radio'],
 fieldset.disabled input[type='checkbox'],
+fieldset.disabled input[type='submit'],
 fieldset.disabled textarea
     cursor: not-allowed
     -webkit-user-select: none
@@ -269,3 +316,21 @@ fieldset.disabled textarea
     -ms-user-select: none
     -o-user-select: none
     user-select: none
+
+.form-block.disabled
+    position: relative
+    cursor: not-allowed
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none
+    &:hover
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 1

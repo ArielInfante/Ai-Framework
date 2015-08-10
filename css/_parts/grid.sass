@@ -1,7 +1,13 @@
+$gridGutter: 15px
+$gridGutterTop:15px
+$gridGutterRight: 0
+$gridGutterBottom: 0
+$gridGutterLeft: 15px
+
 [class*='ai-g']
     width: 100%
     margin: 0 auto
-    padding: 15px 0 0 15px
+    padding: $gridGutterTop $gridGutterRight $gridGutterBottom $gridGutterLeft
     display: block
 
     &:after
@@ -106,264 +112,178 @@
     width: 100%
     display: inline
     float: left
-    padding-right: 15px
+    padding-right: $gridGutter
 
     &:last-of-type
         float: right
+        // @media #{$break-sm}
+        //     .ai-g-1
+        //         .ai-col-sm-1
+        //             width: 100%
 
-@media #{$break-xs}
+        //     .ai-g-2
+        //         .ai-col-sm-1
+        //             width: 50%
+        //         .ai-col-sm-2
+        //             width: 100%
+
+        //     .ai-g-3
+        //         .ai-col-sm-1
+        //             width: 33.33%
+        //         .ai-col-sm-2
+        //             width: 66.66%
+        //         .ai-col-sm-3
+        //             width: 100%
+
+        //     .ai-g-4
+        //         .ai-col-sm-1
+        //             width: 25%
+        //         .ai-col-sm-2
+        //             width: 50%
+        //         .ai-col-sm-3
+        //             width: 75%
+        //         .ai-col-sm-4
+        //             width: 100%
+
+        //     .ai-g-5
+        //         .ai-col-sm-1
+        //             width: 20%
+        //         .ai-col-sm-2
+        //             width: 40%
+        //         .ai-col-sm-3
+        //             width: 60%
+        //         .ai-col-sm-4
+        //             width: 80%
+        //         .ai-col-sm-5
+        //             width: 100%
+
+        //     .ai-g-8
+        //         .ai-col-sm-1
+        //             width: 12.5%
+        //         .ai-col-sm-2
+        //             width: 25%
+        //         .ai-col-sm-3
+        //             width: 37.5%
+        //         .ai-col-sm-4
+        //             width: 50%
+        //         .ai-col-sm-5
+        //             width: 62.5%
+        //         .ai-col-sm-6
+        //             width: 75%
+        //         .ai-col-sm-7
+        //             width: 87.5%
+        //         .ai-col-sm-8
+        //             width: 100%
+
+        //     .ai-g-12
+        //         .ai-col-sm-1
+        //             width: 8.33%
+        //         .ai-col-sm-2
+        //             width: 16.667%
+        //         .ai-col-sm-3
+        //             width: 25%
+        //         .ai-col-sm-4
+        //             width: 33.33%
+        //         .ai-col-sm-5
+        //             width: 41.66%
+        //         .ai-col-sm-6
+        //             width: 50%
+        //         .ai-col-sm-7
+        //             width: 58.33%
+        //         .ai-col-sm-8
+        //             width: 66.66%
+        //         .ai-col-sm-9
+        //             width: 75%
+        //         .ai-col-sm-10
+        //             width: 83.333%
+        //         .ai-col-sm-11
+        //             width: 91.66%
+        //         .ai-col-sm-12
+        //             width: 100%
+
+@media #{$break-xl}
     .ai-g-1
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 100%
 
     .ai-g-2
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 50%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 100%
 
     .ai-g-3
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 33.33%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 66.66%
-        .ai-col-xs-3
+        .ai-col-xl-3
             width: 100%
 
     .ai-g-4
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 25%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 50%
-        .ai-col-xs-3
+        .ai-col-xl-3
             width: 75%
-        .ai-col-xs-4
+        .ai-col-xl-4
             width: 100%
 
     .ai-g-5
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 20%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 40%
-        .ai-col-xs-3
+        .ai-col-xl-3
             width: 60%
-        .ai-col-xs-4
+        .ai-col-xl-4
             width: 80%
-        .ai-col-xs-5
+        .ai-col-xl-5
             width: 100%
 
     .ai-g-8
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 12.5%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 25%
-        .ai-col-xs-3
+        .ai-col-xl-3
             width: 37.5%
-        .ai-col-xs-4
+        .ai-col-xl-4
             width: 50%
-        .ai-col-xs-5
+        .ai-col-xl-5
             width: 62.5%
-        .ai-col-xs-6
+        .ai-col-xl-6
             width: 75%
-        .ai-col-xs-7
+        .ai-col-xl-7
             width: 87.5%
-        .ai-col-xs-8
+        .ai-col-xl-8
             width: 100%
 
     .ai-g-12
-        .ai-col-xs-1
+        .ai-col-xl-1
             width: 8.33%
-        .ai-col-xs-2
+        .ai-col-xl-2
             width: 16.667%
-        .ai-col-xs-3
+        .ai-col-xl-3
             width: 25%
-        .ai-col-xs-4
+        .ai-col-xl-4
             width: 33.33%
-        .ai-col-xs-5
+        .ai-col-xl-5
             width: 41.66%
-        .ai-col-xs-6
+        .ai-col-xl-6
             width: 50%
-        .ai-col-xs-7
+        .ai-col-xl-7
             width: 58.33%
-        .ai-col-xs-8
+        .ai-col-xl-8
             width: 66.66%
-        .ai-col-xs-9
+        .ai-col-xl-9
             width: 75%
-        .ai-col-xs-10
+        .ai-col-xl-10
             width: 83.333%
-        .ai-col-xs-11
+        .ai-col-xl-11
             width: 91.66%
-        .ai-col-xs-12
-            width: 100%
-
-@media #{$break-sm}
-    .ai-g-1
-        .ai-col-sm-1
-            width: 100%
-
-    .ai-g-2
-        .ai-col-sm-1
-            width: 50%
-        .ai-col-sm-2
-            width: 100%
-
-    .ai-g-3
-        .ai-col-sm-1
-            width: 33.33%
-        .ai-col-sm-2
-            width: 66.66%
-        .ai-col-sm-3
-            width: 100%
-
-    .ai-g-4
-        .ai-col-sm-1
-            width: 25%
-        .ai-col-sm-2
-            width: 50%
-        .ai-col-sm-3
-            width: 75%
-        .ai-col-sm-4
-            width: 100%
-
-    .ai-g-5
-        .ai-col-sm-1
-            width: 20%
-        .ai-col-sm-2
-            width: 40%
-        .ai-col-sm-3
-            width: 60%
-        .ai-col-sm-4
-            width: 80%
-        .ai-col-sm-5
-            width: 100%
-
-    .ai-g-8
-        .ai-col-sm-1
-            width: 12.5%
-        .ai-col-sm-2
-            width: 25%
-        .ai-col-sm-3
-            width: 37.5%
-        .ai-col-sm-4
-            width: 50%
-        .ai-col-sm-5
-            width: 62.5%
-        .ai-col-sm-6
-            width: 75%
-        .ai-col-sm-7
-            width: 87.5%
-        .ai-col-sm-8
-            width: 100%
-
-    .ai-g-12
-        .ai-col-sm-1
-            width: 8.33%
-        .ai-col-sm-2
-            width: 16.667%
-        .ai-col-sm-3
-            width: 25%
-        .ai-col-sm-4
-            width: 33.33%
-        .ai-col-sm-5
-            width: 41.66%
-        .ai-col-sm-6
-            width: 50%
-        .ai-col-sm-7
-            width: 58.33%
-        .ai-col-sm-8
-            width: 66.66%
-        .ai-col-sm-9
-            width: 75%
-        .ai-col-sm-10
-            width: 83.333%
-        .ai-col-sm-11
-            width: 91.66%
-        .ai-col-sm-12
-            width: 100%
-
-@media #{$break-md}
-    .ai-g-1
-        .ai-col-md-1
-            width: 100%
-
-    .ai-g-2
-        .ai-col-md-1
-            width: 50%
-        .ai-col-md-2
-            width: 100%
-
-    .ai-g-3
-        .ai-col-md-1
-            width: 33.33%
-        .ai-col-md-2
-            width: 66.66%
-        .ai-col-md-3
-            width: 100%
-
-    .ai-g-4
-        .ai-col-md-1
-            width: 25%
-        .ai-col-md-2
-            width: 50%
-        .ai-col-md-3
-            width: 75%
-        .ai-col-md-4
-            width: 100%
-
-    .ai-g-5
-        .ai-col-md-1
-            width: 20%
-        .ai-col-md-2
-            width: 40%
-        .ai-col-md-3
-            width: 60%
-        .ai-col-md-4
-            width: 80%
-        .ai-col-md-5
-            width: 100%
-
-    .ai-g-8
-        .ai-col-md-1
-            width: 12.5%
-        .ai-col-md-2
-            width: 25%
-        .ai-col-md-3
-            width: 37.5%
-        .ai-col-md-4
-            width: 50%
-        .ai-col-md-5
-            width: 62.5%
-        .ai-col-md-6
-            width: 75%
-        .ai-col-md-7
-            width: 87.5%
-        .ai-col-md-8
-            width: 100%
-
-    .ai-g-12
-        .ai-col-md-1
-            width: 8.33%
-        .ai-col-md-2
-            width: 16.667%
-        .ai-col-md-3
-            width: 25%
-        .ai-col-md-4
-            width: 33.33%
-        .ai-col-md-5
-            width: 41.66%
-        .ai-col-md-6
-            width: 50%
-        .ai-col-md-7
-            width: 58.33%
-        .ai-col-md-8
-            width: 66.66%
-        .ai-col-md-9
-            width: 75%
-        .ai-col-md-10
-            width: 83.333%
-        .ai-col-md-11
-            width: 91.66%
-        .ai-col-md-12
+        .ai-col-xl-12
             width: 100%
 
 @media #{$break-lg}
@@ -451,89 +371,259 @@
         .ai-col-lg-12
             width: 100%
 
-@media #{$break-lg}
+@media #{$break-md}
     .ai-g-1
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 100%
 
     .ai-g-2
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 50%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 100%
 
     .ai-g-3
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 33.33%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 66.66%
-        .ai-col-xl-3
+        .ai-col-md-3
             width: 100%
 
     .ai-g-4
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 25%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 50%
-        .ai-col-xl-3
+        .ai-col-md-3
             width: 75%
-        .ai-col-xl-4
+        .ai-col-md-4
             width: 100%
 
     .ai-g-5
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 20%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 40%
-        .ai-col-xl-3
+        .ai-col-md-3
             width: 60%
-        .ai-col-xl-4
+        .ai-col-md-4
             width: 80%
-        .ai-col-xl-5
+        .ai-col-md-5
             width: 100%
 
     .ai-g-8
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 12.5%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 25%
-        .ai-col-xl-3
+        .ai-col-md-3
             width: 37.5%
-        .ai-col-xl-4
+        .ai-col-md-4
             width: 50%
-        .ai-col-xl-5
+        .ai-col-md-5
             width: 62.5%
-        .ai-col-xl-6
+        .ai-col-md-6
             width: 75%
-        .ai-col-xl-7
+        .ai-col-md-7
             width: 87.5%
-        .ai-col-xl-8
+        .ai-col-md-8
             width: 100%
 
     .ai-g-12
-        .ai-col-xl-1
+        .ai-col-md-1
             width: 8.33%
-        .ai-col-xl-2
+        .ai-col-md-2
             width: 16.667%
-        .ai-col-xl-3
+        .ai-col-md-3
             width: 25%
-        .ai-col-xl-4
+        .ai-col-md-4
             width: 33.33%
-        .ai-col-xl-5
+        .ai-col-md-5
             width: 41.66%
-        .ai-col-xl-6
+        .ai-col-md-6
             width: 50%
-        .ai-col-xl-7
+        .ai-col-md-7
             width: 58.33%
-        .ai-col-xl-8
+        .ai-col-md-8
             width: 66.66%
-        .ai-col-xl-9
+        .ai-col-md-9
             width: 75%
-        .ai-col-xl-10
+        .ai-col-md-10
             width: 83.333%
-        .ai-col-xl-11
+        .ai-col-md-11
             width: 91.66%
-        .ai-col-xl-12
+        .ai-col-md-12
+            width: 100%
+
+@media #{$break-sm}
+    .ai-g-1
+        .ai-col-sm-1
+            width: 100%
+
+    .ai-g-2
+        .ai-col-sm-1
+            width: 50%
+        .ai-col-sm-2
+            width: 100%
+
+    .ai-g-3
+        .ai-col-sm-1
+            width: 33.33%
+        .ai-col-sm-2
+            width: 66.66%
+        .ai-col-sm-3
+            width: 100%
+
+    .ai-g-4
+        .ai-col-sm-1
+            width: 25%
+        .ai-col-sm-2
+            width: 50%
+        .ai-col-sm-3
+            width: 75%
+        .ai-col-sm-4
+            width: 100%
+
+    .ai-g-5
+        .ai-col-sm-1
+            width: 20%
+        .ai-col-sm-2
+            width: 40%
+        .ai-col-sm-3
+            width: 60%
+        .ai-col-sm-4
+            width: 80%
+        .ai-col-sm-5
+            width: 100%
+
+    .ai-g-8
+        .ai-col-sm-1
+            width: 12.5%
+        .ai-col-sm-2
+            width: 25%
+        .ai-col-sm-3
+            width: 37.5%
+        .ai-col-sm-4
+            width: 50%
+        .ai-col-sm-5
+            width: 62.5%
+        .ai-col-sm-6
+            width: 75%
+        .ai-col-sm-7
+            width: 87.5%
+        .ai-col-sm-8
+            width: 100%
+
+    .ai-g-12
+        .ai-col-sm-1
+            width: 8.33%
+        .ai-col-sm-2
+            width: 16.667%
+        .ai-col-sm-3
+            width: 25%
+        .ai-col-sm-4
+            width: 33.33%
+        .ai-col-sm-5
+            width: 41.66%
+        .ai-col-sm-6
+            width: 50%
+        .ai-col-sm-7
+            width: 58.33%
+        .ai-col-sm-8
+            width: 66.66%
+        .ai-col-sm-9
+            width: 75%
+        .ai-col-sm-10
+            width: 83.333%
+        .ai-col-sm-11
+            width: 91.66%
+        .ai-col-sm-12
+            width: 100%
+
+@media #{$break-xs}
+    .ai-g-1
+        .ai-col-xs-1
+            width: 100%
+
+    .ai-g-2
+        .ai-col-xs-1
+            width: 50%
+        .ai-col-xs-2
+            width: 100%
+
+    .ai-g-3
+        .ai-col-xs-1
+            width: 33.33%
+        .ai-col-xs-2
+            width: 66.66%
+        .ai-col-xs-3
+            width: 100%
+
+    .ai-g-4
+        .ai-col-xs-1
+            width: 25%
+        .ai-col-xs-2
+            width: 50%
+        .ai-col-xs-3
+            width: 75%
+        .ai-col-xs-4
+            width: 100%
+
+    .ai-g-5
+        .ai-col-xs-1
+            width: 20%
+        .ai-col-xs-2
+            width: 40%
+        .ai-col-xs-3
+            width: 60%
+        .ai-col-xs-4
+            width: 80%
+        .ai-col-xs-5
+            width: 100%
+
+    .ai-g-8
+        .ai-col-xs-1
+            width: 12.5%
+        .ai-col-xs-2
+            width: 25%
+        .ai-col-xs-3
+            width: 37.5%
+        .ai-col-xs-4
+            width: 50%
+        .ai-col-xs-5
+            width: 62.5%
+        .ai-col-xs-6
+            width: 75%
+        .ai-col-xs-7
+            width: 87.5%
+        .ai-col-xs-8
+            width: 100%
+
+    .ai-g-12
+        .ai-col-xs-1
+            width: 8.33%
+        .ai-col-xs-2
+            width: 16.667%
+        .ai-col-xs-3
+            width: 25%
+        .ai-col-xs-4
+            width: 33.33%
+        .ai-col-xs-5
+            width: 41.66%
+        .ai-col-xs-6
+            width: 50%
+        .ai-col-xs-7
+            width: 58.33%
+        .ai-col-xs-8
+            width: 66.66%
+        .ai-col-xs-9
+            width: 75%
+        .ai-col-xs-10
+            width: 83.333%
+        .ai-col-xs-11
+            width: 91.66%
+        .ai-col-xs-12
             width: 100%
 //
     @media only screen #{$break-min}

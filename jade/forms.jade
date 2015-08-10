@@ -136,13 +136,11 @@ html
                     input.ai-input#aiInputicon(type="text", placeholder="placeholder")
             .form-block
                 | LARGE
-                br
                 label.icon-block-lg(for="aiInputicon")
                     i.fa.fa-star
                     input.ai-input#aiInputicon(type="text", placeholder="placeholder")
             .form-block
                 | XTRA LARGE
-                br
                 label.icon-block-xl(for="aiInputicon")
                     i.fa.fa-star
                     input.ai-input#aiInputicon(type="text", placeholder="placeholder")
@@ -154,11 +152,14 @@ html
                     i.fa.fa-star
             hr
             h1 Disabled
-            input.disabled(type="text")
+            input.disabled(type="text", placeholder="placeholder")
             br
             .form-block
                 label.icon-block-xl.icon-right(for="aiInputicon")
                     input.ai-input#aiInputicon(type="text", placeholder="placeholder", disabled="true")
                     i.fa.fa-star
+            input.ai-input(type="submit")
+            .form-block.disabled
+                input.ai-input(type="submit")
             input(type="radio" disabled="true")
             input(type="checkbox" disabled="true")
